@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocktail DB</title>
+    <!-- fontawesome kit -->
+    <script src="https://kit.fontawesome.com/684444d9c5.js" crossorigin="anonymous"></script>
+
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-expand-lg px-4 py-3 fixed-top nav-bg-custom">
+            <div class="container-fluid">
+              <a class="navbar-brand text-danger fw-bolder" href="#">Cocktail<em><small>DB</small></em></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse px-lg-5" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white hover-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white hover-link" href="#">Have Drink?</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white hover-link" href="#">Don't Like!</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-white hover-link" href="#">Order Now</a>
+                  </li>
+                </ul>
+                <div class="d-flex" role="search">
+                  <input id="search-field" class="form-control me-2" placeholder="search your cocktail">
+                  <button onclick="searchCocktail()" class="btn btn-outline-info text-white">Search</button>
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+    <!-- Main starts -->
+    <main class="mt-5">
+        <section class="bg-dark pb-5">
+
+            <div class="margin-top">
+                <h3 class="text-center text-info ">Search Your Cocktail</h3>
+            </div>
+            <!-- error message -->
+            <div id="error-message-section" class="text-center d-none">
+                <div class="mt-3"><h4 class="text-danger">Not Found Your Expected Result, Please Try Again.</h4></div>
+            </div>
+            <!-- toggler spinner -->
+            <div id="toggler-spinner" class="h-spn-div d-flex justify-content-center align-items-center d-none">
+                <div class="spinner-grow text-info" style="width: 3rem; height: 3rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <!-- cocktail container -->
+            <div id="drinks-container" class="row row-cols-1 row-cols-md-3 container mx-auto">
+
+            </div>
+        </section>
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="cocktailModal" tabindex="-1" aria-labelledby="cocktailModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content bg-warning">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-white fs-4" id="cocktailModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div id="modalBody" class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer starts -->
+    <footer class="py-5 bg-black">
+        <p class="text-white-50 text-center py-5"><small>Copyright&COPY;2022. All Rights Reserved By</small> <em class="text-info"><a href="https://www.thecocktaildb.com/" class="text-decoration-none">CocktailDB.com</a></em></p>
+        <div class="d-flex justify-content-center text-info gap-4">
+            <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-facebook fa-3x"></i>
+            </a>
+            <a href="#" class="text-decoration-none">
+                <i class="fa-brands fa-twitter fa-3x"></i>
+            </a>
+            <a href="" class="text-decoration-none">
+                <i class="fa-brands fa-instagram fa-3x"></i>
+            </a>
+            <a href="index.html" class="text-decoration-none text-white bg-info border rounded-circle">
+                <i class="fa-solid fa-arrow-up fa-3x px-1 "></i>
+            </a>
+        </div>
+        <div class="text-info d-flex justify-content-center mt-5">
+            <h5>
+                <span><a src="#" class="text-decoration-none">Terms & Policies</a></span> | <span><a src="#" class="text-decoration-none">Settings</a></span>
+            </h5>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
